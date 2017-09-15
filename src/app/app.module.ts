@@ -11,6 +11,11 @@ import { ClinicsComponent } from './components/clinics/clinics.component';
 import { ClinicDetailComponent } from './components/clinic-detail/clinic-detail.component';
 import { TherapistsComponent } from './components/therapists/therapists.component';
 import { TherapistDetailComponent } from './components/therapist-detail/therapist-detail.component';
+import { NoContentComponent } from './pages/no-content/no-content.component';
+
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routes';
+import { HeaderComponent } from './pages/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +23,12 @@ import { TherapistDetailComponent } from './components/therapist-detail/therapis
     ClinicsComponent,
     ClinicDetailComponent,
     TherapistsComponent,
-    TherapistDetailComponent
+    TherapistDetailComponent,
+    NoContentComponent,
+    HeaderComponent,
   ],
   imports: [
+    RouterModule.forRoot(ROUTES),
     BrowserModule,
     FormsModule,
     HttpModule
