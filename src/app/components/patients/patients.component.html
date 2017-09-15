@@ -1,0 +1,18 @@
+<div>
+  <h2>Patients list</h2>
+
+  <div>
+    <ul>
+      <li *ngFor="let patient of patients"
+          (click)="onSelect(patient)"
+          [class.selected]="patient === selected"
+      >
+        {{patient.fullName}} id: #{{patient.id}}
+      </li>
+    </ul>
+
+    <div *ngIf="selected">
+      <app-patient-detail [patient]="selected" ></app-patient-detail>
+    </div>
+  </div>
+</div>
