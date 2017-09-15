@@ -1,0 +1,17 @@
+<div>
+  <h2>List of clinics</h2>
+  <ul class="clinics">
+    <li *ngFor="let clinic of clinics"
+        [class.selected]="clinic === selectedClinic"
+        (click)="onSelect(clinic)"
+    >
+      {{ clinic.id}}: {{ clinic.label }}
+    </li>
+  </ul>
+
+  <div *ngIf="selectedClinic">
+    <h2>selected Clinic</h2>
+    <div>text description</div>
+    <app-clinic-detail [clinic]="selectedClinic"></app-clinic-detail>
+  </div>
+</div>

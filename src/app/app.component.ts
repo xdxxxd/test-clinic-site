@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ClinicsComponent } from './components/clinics/clinics.component';
+import { TherapistsComponent } from './components/therapists/therapists.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Clinic home page';
 }

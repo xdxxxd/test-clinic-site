@@ -1,0 +1,18 @@
+<div>
+  <h2>therapists list</h2>
+
+  <div>
+    <ul>
+      <li *ngFor="let therapist of therapists; let index = index"
+          (click)="onSelect(therapist)"
+          [class.selected]="therapist === selected"
+      >
+        {{ index }}: {{therapist.fullName}} id: #{{therapist.id}}
+      </li>
+    </ul>
+
+    <div *ngIf="selected">
+      <app-therapist-detail [therapist]="selected" ></app-therapist-detail>
+    </div>
+  </div>
+</div>
